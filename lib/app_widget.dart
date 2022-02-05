@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class AppWidget extends StatelessWidget {
@@ -7,56 +7,60 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    return const MaterialApp(
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Povz',
-    //   theme: ThemeData(
-    //     backgroundColor: const Color(0xff5576D9),
-    //     fontFamily: 'Inconsolata',
-    //   ).copyWith(
-    //     colorScheme: const ColorScheme(
-    //         primary: Color(0xff1131D1),
-    //         secondary: Colors.white,
-    //         surface: Color(0xff5576D9),
-    //         background: Color(0xff5576D9),
-    //         error: Colors.red,
-    //         onPrimary: Color(0xff1131D1),
-    //         onSecondary: Color(0xff5576D9),
-    //         onSurface: Color(0xff5576D9),
-    //         onBackground: Color(0xff5576D9),
-    //         onError: Colors.red,
-    //         brightness: Brightness.light),
-    //     hoverColor: const Color.fromRGBO(17, 49, 2, .5),
-    //     // primaryColor: const Color(0xff1131D1),
-    //     textTheme: const TextTheme(
-    //       overline: TextStyle(
-    //         color: Colors.white,
-    //         fontSize: 12,
-    //         fontWeight: FontWeight.w400,
-    //       ),
-    //       bodyText1: TextStyle(
-    //         color: Colors.white,
-    //         fontSize: 12,
-    //         fontWeight: FontWeight.w400,
-    //       ),
-    //       headline1: TextStyle(
-    //         color: Colors.white,
-    //         fontSize: 14,
-    //         fontWeight: FontWeight.w600,
-    //       ),
-    //       subtitle1: TextStyle(
-    //         color: Colors.white,
-    //         fontSize: 10,
-    //         fontWeight: FontWeight.w600,
-    //       ),
-    //       button: TextStyle(
-    //         color: Colors.white,
-    //         fontSize: 12,
-    //         fontWeight: FontWeight.w400,
-    //       ),
-    //     ),
-    //   ),
+      theme: ThemeData(
+        backgroundColor: const Color(0xffE5E5E5),
+        fontFamily: 'Poppins',
+      ).copyWith(
+        colorScheme: const ColorScheme(
+            primary: Color(0xffFFB606),
+            secondary: Color(0xffF0F0F0),
+            surface: Color(0xffF0F0F0),
+            background: Color(0xffE5E5E5),
+            error: Colors.red,
+            onPrimary: Color(0xffFFB606),
+            onSecondary: Color(0xffF0F0F0),
+            onSurface: Color(0xffF0F0F0),
+            onBackground: Color(0xffE5E5E5),
+            onError: Colors.red,
+            brightness: Brightness.light),
+        textTheme: const TextTheme(
+          headline1: TextStyle(
+            color: Color(0xff222222),
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+          ),
+          headline2: TextStyle(
+            color: Color(0xffffffff),
+            fontSize: 22,
+            fontWeight: FontWeight.w600,
+          ),
+          headline3: TextStyle(
+            color: Color(0xff222222),
+            fontSize: 20,
+          ),
+          headline4: TextStyle(
+            color: Color(0xff222222),
+            fontSize: 16
+          ),
+          subtitle1: TextStyle(
+            color: Color.fromRGBO(34, 34, 34, 0.6),
+            fontSize: 12,
+          ),
+          bodyText1: TextStyle(
+            color: Color(0xff222222),
+            fontSize: 14,
+            fontWeight: FontWeight.w600,
+          ),
+          bodyText2: TextStyle(
+            color: Color(0xff222222),
+            fontSize: 14,
+          ),
+        ),
+      ),
     ).modular();
   }
 }
