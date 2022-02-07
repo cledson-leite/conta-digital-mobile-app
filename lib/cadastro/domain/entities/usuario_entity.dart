@@ -9,23 +9,18 @@ class UsuarioEntity extends Equatable {
   final String email;
   final int celular;
   final String senha;
-  final int saldo;
+  final double saldo;
   final String tokenAccess;
   final String pais;
   final String estado;
   final String cidade;
   final String logradouro;
   final int numero;
-  final String compelmento;
   final String bairro;
-  final String self;
-  final String frente;
-  final String verso;
   final String id;
   final String complemento;
 
   const UsuarioEntity(
-    this.tokenAccess,
     {
     required this.nome,
     required this.documento,
@@ -41,13 +36,10 @@ class UsuarioEntity extends Equatable {
     required this.cidade,
     required this.logradouro,
     required this.numero,
-    required this.compelmento,
     required this.bairro,
-    required this.self,
-    required this.frente,
-    required this.verso,
-    required this.id,
     required this.complemento,
+    required this.tokenAccess,
+    required this.id,
   });
 
   @override
@@ -66,13 +58,9 @@ class UsuarioEntity extends Equatable {
         estado,
         cidade,
         logradouro,
-        numero,
-        compelmento,
-        bairro,
-        self,
-        frente,
-        verso,
-        id,
+        numero,        
         complemento,
+        bairro,
+        id,
       ];
 }
